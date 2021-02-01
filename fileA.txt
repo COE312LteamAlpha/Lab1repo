@@ -1,0 +1,1 @@
+This is file1.txt, an example to show downloading a document from GitHub.Each member should add his/her name to this document.Member A:Member B:
