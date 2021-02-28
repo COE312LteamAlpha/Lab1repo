@@ -111,7 +111,6 @@ public class DriverC {
 				}
 				
 			case "look":
-				String dummy = scan.next();
 				if(currentR.equals(TGH.Roomname())  ) {
 					TGH.lookaround();
 				}
