@@ -18,7 +18,9 @@ public class HeadMasterOffice implements Rooms, Charc, Things {
 			System.out.println("Here's a portrait of a former headmaster, Phineus Nigellus Black. (also the great-great grandfather of Sirius Black)");
 		}
 		else if(Usething.equals("pensieve")) {
-			System.out.println("Type whose memory you would like to read about -   : ");
+			System.out.println("It has the appearance of a shallow stone or metal basin, into which runes and strange symbols were carved and precious stones were fitted. "
+					+ "It was filled with a silvery substance that appears to be a cloudy liquid/gas; "
+					+"the collected memories of people who had siphoned their recollections into it.");
 		}
 		else {
 			System.out.println("This item does not exist in this room");
