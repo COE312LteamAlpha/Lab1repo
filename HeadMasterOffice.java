@@ -7,20 +7,22 @@ public class HeadMasterOffice implements Rooms, Charc, Things {
 		}
 	
 	public void enterRoom() {
-		System.out.println("This room has a number of spindly tables upon which were set delicate looking silver instruments "
-				+"that whirred and emitted small puffs of smoke,"
-				+" as well as an incredible collection of books, a Pensieve, and Fawkes the phoenix.");
+		System.out.println("This room has a number of spindly tables upon which were set delicate looking silver instruments \n"
+				+"that whirred and emitted small puffs of smoke,\n"
+				+" as well as an incredible collection of books, a Pensieve, and Fawkes the phoenix.\n");
 	}
 	String quill;
-	public void use(String Usething) {
+	public void use(String Usething, String CurrentRoom) {
+		if(CurrentRoom.equals("HeadMasterOffice")) {
 		
 		if(Usething.equals("portraits")) {
 			System.out.println("Here's a portrait of a former headmaster, Phineus Nigellus Black. (also the great-great grandfather of Sirius Black)");
 		}
 		else if(Usething.equals("pensieve")) {
-			System.out.println("It has the appearance of a shallow stone or metal basin, into which runes and strange symbols were carved and precious stones were fitted. "
-					+ "It was filled with a silvery substance that appears to be a cloudy liquid/gas; "
+			System.out.println("It has the appearance of a shallow stone or metal basin, into which runes and strange symbols were carved and precious stones were fitted. \n"
+					+ "It was filled with a silvery substance that appears to be a cloudy liquid/gas; \n"
 					+"the collected memories of people who had siphoned their recollections into it.");
+		}
 		}
 		else {
 			System.out.println("This item does not exist in this room");
@@ -29,7 +31,7 @@ public class HeadMasterOffice implements Rooms, Charc, Things {
 
 	public void talk() {
 		// TODO Auto-generated method stub
-		System.out.println("Nice to meet you student! Have a look around the office. There are portraits," 
+		System.out.println("Nice to meet you student! Have a look around the office. There are portraits,\n" 
 		+ " a pensieve and Fawkes the phoenix. I would advise you to not wake him up. ");
 	}
 	
@@ -55,7 +57,7 @@ public class HeadMasterOffice implements Rooms, Charc, Things {
 	
 	public void lookaround() {
 		// TODO Auto-generated method stub
-		System.out.println("The headmaster Professor Dumbledore is present at front. On to his right there is a portrait. Near that is a phoenix sleeping."
+		System.out.println("The headmaster Professor Dumbledore is present at front. On to his right there is a portrait. Near that is a phoenix sleeping. \n"
 		+"There's a silver bowl on a stand on to the left filled with some sort of liquid. ");
 	}
 	

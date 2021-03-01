@@ -12,12 +12,12 @@ public class DriverC {
 		HeadMasterOffice HMO = new HeadMasterOffice();
 		
 		System.out.println("Messrs Moony, Wormtail, Padfoot, and Prongs Purveyors of Aids to Magical Mischief-Makers "
-				+ "are proud to present THE MARAUDER'S MAP!" + " Say thee magic phrase to reveal thus map! \n");
-		String checker = scan.next();
-		if(checker.equals("open")) { //change statement condition to this: I solemnly swear that I am up for no good 
+				+ " are proud to present THE MARAUDER'S MAP!" + "\nSay thee magic phrase to reveal thus map! \n");
+		String checker = scan.nextLine();
+		if(checker.equals("I solemnly swear that I am up for no good")) { //change statement condition to this: I solemnly swear that I am up for no good 
 			System.out.println("The map is now visible.\n" + "In this map contains the locations of three rooms: The Great Hall,"
-					+" the Library and the Head Master's Office.\n" + "The door to the north leads you to the Great Hall."
-					+"The door to the west leads you to the Library. And the door to the east leads you to the Head Master's Office. " );
+					+"\nthe Library and the Head Master's Office.\n" + "The door to the north leads you to the Great Hall."
+					+"\nThe door to the west leads you to the Library. And the door to the east leads you to the Head Master's Office. " );
 			//int x= 0;}
 			while(scan.nextLine() != null){
 			
@@ -67,48 +67,32 @@ public class DriverC {
 					if(currentR.equals(TGH.Roomname() )) {
 						TGH.talk();
 					}
-					else if(currentR.equals(lib.Roomname())) {
-						lib.talk();
-					}
-					else if(currentR.equals(HMO.Roomname())) {
-						HMO.talk();
-					}
+					
 					else {
-						//System.out.println("This character is not present in the room");
+						System.out.println("This character is not present in the room");
 					}
 					break;
 				case "Hermione":
-					if(currentR.equals(TGH.Roomname() )) {
-						TGH.talk();
-					}
-					else if(currentR.equals(lib.Roomname())) {
+					if(currentR.equals(lib.Roomname())) {
 						lib.talk();
 					}
-					else if(currentR.equals(HMO.Roomname())) {
-						HMO.talk();
-					}
 					else {
-						//System.out.println("This character is not present in the room");
+						System.out.println("This character is not present in the room");
 					}
 					break;
 				case "Dumbledore":
-					if(currentR.equals(TGH.Roomname() )) {
-						TGH.talk();
-					}
-					else if(currentR.equals(lib.Roomname())) {
-						lib.talk();
-					}
-					else if(currentR.equals(HMO.Roomname())) {
+					if(currentR.equals(HMO.Roomname())) {
 						HMO.talk();
 					}
 					else {
-						//System.out.println("This character is not present in the room");
+						System.out.println("This character is not present in the room");
 					}
 					break;
 				default: 
 					System.out.println("This character is currently unavailable, wait for the DLCs");
 					break;
 				}
+				break;
 				
 			case "look":
 				if(currentR.equals(TGH.Roomname())  ) {
@@ -126,14 +110,15 @@ public class DriverC {
 				break;
 			case "use":
 				//String obj=scan.next();
+				
 				if(TGH.checkObj(nav1)) {
-					TGH.use(nav1);
+					TGH.use(nav1, currentR);
 				}
 				else if(lib.checkObj(nav1)) {
-					lib.use(nav1);
+					lib.use(nav1, currentR);
 				}
 				else if(HMO.checkObj(nav1)) {
-					HMO.use(nav1);
+					HMO.use(nav1, currentR);
 				}
 				else {
 					System.out.println("This item does not currently exist. Please wait for the DLC. ");

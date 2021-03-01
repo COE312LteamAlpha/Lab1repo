@@ -8,12 +8,13 @@ public class Library implements Rooms, Charc, Things{
 		}
 	
 	public void enterRoom() {
-		System.out.println("contained tens of thousands of books on thousands of shelves. Overseen by Madam Irma Pince,"
-				+" the library was where students could go to peruse or borrow books to supplement their studies (or for personal enjoyment)"
-				+"The library closed at 8:00 pm." + "Among the students is Hermione studying for exams which are months away. ");
+		System.out.println("contained tens of thousands of books on thousands of shelves. Overseen by Madam Irma Pince,\n"
+				+" the library was where students could go to peruse or borrow books to supplement their studies (or for personal enjoyment)\n"
+				+" The library closed at 8:00 pm." + "Among the students is Hermione studying for exams which are months away. ");
 	}
 	String quill;
-	public void use(String Usething) {
+	public void use(String Usething, String CurrentRoom) {
+		if(CurrentRoom.equals("Library")){
 		
 		if(Usething.equals("books")) {
 			System.out.println("The books here include: many sections such as the Invisibility Section, a section with information about dragons," 
@@ -27,6 +28,7 @@ public class Library implements Rooms, Charc, Things{
 		quill = scan.nextLine();
 		
 		}
+	}
 		else {
 			System.out.println("This item does not exist in this room");
 		}
@@ -61,11 +63,8 @@ public class Library implements Rooms, Charc, Things{
 	
 	public void lookaround() {
 		// TODO Auto-generated method stub
-		System.out.println("The staff table was at the front, where the entire Hogwarts staff sat." 
-				+" There was a throne-like chair in the centre of the table where the current Headmaster or Headmistress sat."
-				+ " To the right there was the Sorting Hat and to the left there was the Feast," 
-				+ " hundreds of plates are set on each of the four House tables and are filled with food magically appearing on the empty plates," 
-				+ " prepared by house-elves working in the kitchens below.");
+		System.out.println("You observe the sheer size of the library; \n" + 
+		" tens of thousands of books; thousands of shelves; hundreds of narrow rows.");
 	}
 	
 	@Override
